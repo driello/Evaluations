@@ -33,18 +33,38 @@ tas de Béziers">
     </header>
 
 <main class="container">
-  <section>
-    <h1>Contact</h1>
-    <p class="lead">Une question, une inscription ou une idée de partenariat ? Écrivez-nous.</p>
-   <form>
-  <input type="text" placeholder="Nom" required>
-  <input type="email" placeholder="Email" required>
-  <input type="text" placeholder="Sujet">
-  <textarea placeholder="Message..."></textarea>
-  <button type="submit">Envoyer</button>
-</form>
+<section class="container my-5">
+  <h2 class="mb-4 text-center">Contactez-nous</h2>
 
-  </section>
+  <form>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="nom" class="form-label">Nom</label>
+        <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+      </div>
+      <div class="col-md-6">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="vous@exemple.com" required>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="sujet" class="form-label">Sujet</label>
+      <input type="text" class="form-control" id="sujet" placeholder="Objet du message">
+    </div>
+
+    <div class="mb-3">
+      <label for="message" class="form-label">Message</label>
+      <textarea class="form-control" id="message" rows="5" placeholder="Votre message..." required></textarea>
+    </div>
+
+    <div class="d-flex justify-content-between">
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+      <a href="index.html" class="btn btn-secondary">Retour</a>
+    </div>
+  </form>
+</section>
+
 </main>
 
     <footer>
