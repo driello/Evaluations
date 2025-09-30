@@ -22,19 +22,23 @@ header h1,
   display: block;     /* évite toute variation inline */
 }
 
-header nav ul {
-  list-style: none;
-  display: flex; 
-  justify-content: end;    /* menu horizontal sur grand écran */
-  gap: 12px;
+/* barre nav de base */
+header nav ul{
+  display:flex;
+  flex-wrap:wrap;              /* autorise le retour à la ligne */
+  align-items:center;
+  justify-content:center;      /* centré par défaut */
+  padding:0;
+  margin:0;
+  list-style:none;
 }
 
-header nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 700;
-  padding: 6px 10px;
-  border-radius: 6px;
+header nav a{
+  display:block;
+  font-weight:700;
+  font-size: clamp(14px, 3.6vw, 18px); /* texte qui s’adapte */
+  text-decoration:none;
+  color: whitesmoke;
 }
 
 
@@ -156,4 +160,18 @@ footer {
    .nav ol {
     flex-direction: column;
    }
+}
+
+/* petit écran : menu sous le titre, bien espacé */
+@media (max-width: 600px){
+  header .header-inner{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:.5rem;
+  }
+  header nav ul{
+    justify-content:center; /* évite le débordement */
+    row-gap: .25rem;
+  }
 }
