@@ -43,9 +43,7 @@ header nav a {
     box-sizing: border-box;
   }
 
-  .accueil {
-    text-align: center;
-  }
+  
   .accueil h2 {
     text-align: center;
     color: rgb(8, 8, 8);
