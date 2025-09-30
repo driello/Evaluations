@@ -46,6 +46,13 @@ header nav a {
   main h2 {
     font-size: 2.1rem;
     text-align: center;
+    text-decoration: underline;
+  }
+
+  p {
+
+    align-items: center;
+    margin-top: 20px;
   }
 
   
@@ -73,13 +80,6 @@ header nav a {
   margin: 0 auto;        /* centre la section horizontalement */
   text-align: center;    /* centre le texte et le titre */
   padding: 1rem;
-}
-
-
-
-.activite p {
-  line-height: 1.6;
-  font-size: 1.1rem;
 }
 
 .cards-container {
@@ -112,6 +112,9 @@ font-style: italic;
 text-decoration: underline;
 }
 
+.article h3 {
+font-style: italic;}
+
 col {
   display: flex;
   justify-content: center;
@@ -125,6 +128,8 @@ footer {
 @media (max-width: 768px) {
   .presentation {
     flex-direction: column;      /* empile logo/titre puis menu */
-   
-  }
+   }
+   .nav ol {
+    flex-direction: column;
+   }
 }
