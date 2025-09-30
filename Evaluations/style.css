@@ -2,11 +2,7 @@
 header {
   background: #c61717;
   color: #fff;
-  display: flex;                  
-  justify-content: space-between;      /* ligne par défaut */
-  align-items: center;
-  gap: 12px;
-  padding: 10px 20px;
+  
 }
 
 header h1,
@@ -26,28 +22,20 @@ header nav ul{
   flex-wrap:wrap;              /* autorise le retour à la ligne */
   align-items:center;
   justify-content:center;      /* centré par défaut */
-  padding:0;
-  margin:0;
   list-style:none;
+  max-width: 100%;
+    height: auto;
+    gap: 8px;
+    box-sizing: border-box;
 }
 
 header nav a{
-  display:block;
   font-weight:700;
-  font-size: clamp(14px, 3.6vw, 18px); /* texte qui s’adapte */
+  font-size: 1.4rem;
   text-decoration:none;
   color: whitesmoke;
 }
 
-
-  /* Menu en bloc plein largeur, multi-lignes si besoin */
-  header nav ul {
-    max-width: 100%;
-    height: auto;
-    gap: 8px;
-    box-sizing: border-box;
-  }
- 
  h1 {
    font-size: 2.1rem;
     text-align: center;
@@ -63,7 +51,6 @@ header nav a{
   }
 
   p {
-
     align-items: center;
     margin-top: 20px;
   }
@@ -94,14 +81,7 @@ header nav a{
   text-align: center;    /* centre le texte et le titre */
 }
 
-.cards-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colonnes */
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem;
-}
+
 .card {
   background: #fff;
   border: 1px solid #ddd;
@@ -136,18 +116,10 @@ font-style: italic;
   margin-inline: 1rem;
   margin-top: 1.5rem;
 }
-time {
-  margin-left: 2rem;
-}
 
-col {
-  display: flex;
-  justify-content: center;
-}
 
 
 footer {
-  text-align: center;
   text-shadow: 10px 10px 10px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.157);
 
