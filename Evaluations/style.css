@@ -18,13 +18,8 @@ header h1,
 
 /* barre nav de base */
 header nav ul{
-  display:flex;
-  flex-wrap:wrap;              /* autorise le retour à la ligne */
-  align-items:center;
-  justify-content:center;      /* centré par défaut */
   list-style:none;
   max-width: 100%;
-    height: auto;
     gap: 8px;
     box-sizing: border-box;
 }
