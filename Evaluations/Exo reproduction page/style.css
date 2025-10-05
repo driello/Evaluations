@@ -87,7 +87,21 @@ section {
     height: auto;
 }
 
+@media (max-width: 700px) {
+    .coordonnees,
+    .bordel,
+    .operations,
+    .important {
+
+        display: block;
+        width: 100%;
+        float: none;}
+
+      
+}
+
 .coordonnees img {
+    display: flex;
     width: 24px;
     height: auto;
     margin-inline: 1rem;

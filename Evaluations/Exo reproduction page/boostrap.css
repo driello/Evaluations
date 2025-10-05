@@ -4,9 +4,24 @@
 }
 header {
     background: rgb(211, 207, 207);
+
 }
 
 nav {
-    border: 1px solid black;
+ 
     background: rgb(215, 211, 211);
 }
+table {
+    font-size: 0.8rem;
+}
+
+/* Bordure en pointillé qui pulse en couleur */
+.bd1 {
+  border: 2px dashed rgb(255, 0, 0);            /* garde le pointillé */
+  animation: borderPulse 1.2s infinite alternate;
+}
+@keyframes borderPulse {
+  from { border-color:#d00; }
+  to   { border-color:#ddd8d0; }
+}
+
