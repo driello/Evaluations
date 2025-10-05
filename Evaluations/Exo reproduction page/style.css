@@ -93,10 +93,10 @@ section {
     .operations,
     .important {
 
-        display: block;
+        display:block;
         width: 100%;
-        float: none;}
-
+        float: none;
+    }
       
 }
 
@@ -193,6 +193,7 @@ section {
     margin: 1rem;
     float: left;
     width: 44%;
+    height: 100px;
 }
 .important img {
      width: 24px;
@@ -218,12 +219,14 @@ table {
     border: 2px solid black;
     width: 100%;
     border-collapse: collapse; /* pour coller les bordures */
+    
 }
 
 th, td {
   padding: 6px 10px;
   border: 1px solid #000;
   text-align: start;   /* alignement par défaut à gauche */
+  font-size: 0.8rem;
 }
 
 th:nth-child(3),

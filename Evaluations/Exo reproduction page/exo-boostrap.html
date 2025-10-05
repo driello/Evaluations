@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./boostrap.css">
+  <link rel="stylesheet" href="./boostrap.css">
   <title>Document</title>
 </head>
 
@@ -39,12 +39,12 @@
     <nav class="my-3">
       <ul class="d-flex flex-wrap align-items-center list-unstyled justify-content-center">
         <li><a class="btn btn-light" href="#"><img src="./home.png" alt="home" style="width: 34px;"></a></li>
-                <li><a class="btn btn-light btn-lg" href="#">Mes infos</a></li>
-                <li><a class="btn btn-light btn-lg" href="#">Mes autorisations d'accès</a></li>
-                <li><a class="btn btn-light btn-lg" href="#">Mes salariés</a></li>
-                <li><a class="btn btn-light btn-lg" href="#">Mes cotisations</a></li>
-                <li><a class="btn btn-light btn-lg" href="#">Mes contrats</a></li>
-                <li><a class="btn btn-light btn-lg" href="#">Mes opérations</a></li>
+        <li><a class="btn btn-light btn-lg" href="#">Mes infos</a></li>
+        <li><a class="btn btn-light btn-lg" href="#">Mes autorisations d'accès</a></li>
+        <li><a class="btn btn-light btn-lg" href="#">Mes salariés</a></li>
+        <li><a class="btn btn-light btn-lg" href="#">Mes cotisations</a></li>
+        <li><a class="btn btn-light btn-lg" href="#">Mes contrats</a></li>
+        <li><a class="btn btn-light btn-lg" href="#">Mes opérations</a></li>
       </ul>
     </nav>
 
@@ -60,59 +60,66 @@
     <section class="row g-4 justify-content-center align-items-stretch">
       <div class="col-md-6">
         <div class="coordonnees border h-100">
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <img src="./pin.svg" alt="punaise">
-            <h3 class="m-0">Coordonnées</h3>
+          <div class="d-flex align-items-center gap-2 mb-4">
+            <img src="./pin.svg" alt="punaise" style="width: 24px;" class="mx-2 mt-1">
+            <h3 class="mt-2">Coordonnées</h3>
           </div>
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <img src="./0-circle.svg" alt="n">
+          <div class="d-flex align-items-center gap-2 mb-4 mx-3">
+            <img src="./0-circle.svg" alt="n" style="width: 18px;">
             <p class="m-0">Siret: 755489832</p>
           </div>
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <img src="./house.svg" alt="adresse">
+          <div class="d-flex align-items-center gap-2 mb-4 mx-3">
+            <img src="./house.svg" alt="adresse" style="width: 18px;">
             <p class="m-0">Adresse: 298 boulevard Voltaire 75000 PARIS</p>
           </div>
-          <div class="d-flex align-items-center gap-2 mb-2">
-            <img src="./telephone.svg" alt="telephone">
+          <div class="d-flex align-items-center gap-2 mb-4 mx-3">
+            <img src="./telephone.svg" alt="telephone" style="width: 18px;">
             <p class="m-0">Téléphone 01 02 02 02 02</p>
           </div>
-          <div class="d-flex align-items-center gap-2">
-            <img src="./email.png" alt="mail" style="width: 24px;">
+          <div class="d-flex align-items-center gap-2 mx-3">
+            <img src="./email.png" alt="mail" style="width: 18px;">
             <p class="m-0">Adresse mail: <a href="mailto:hilton.paris@gmail.com">hilton.paris@gmail.com</a></p>
           </div>
         </div>
       </div>
 
       <div class="col-md-6">
-        <div class="bordel border h-100">
+        <div class="bordel  h-100">
           <div class="bd1 mb-3">
-            <h3 class="d-flex align-items-center gap-2 m-0">
-              <img src="./warning.png" style="width: 24px;" alt="urgent"> Urgent
-            </h3>
-            <p>Il ne vous reste que 3 jours pour remplir la déclaration nominative annuelle des
-              salaires (DNAS). Pour faire votre déclaration, <a href="#">cliquez ici.</a></p>
+            <div class="row align-items-center">
+              <div class="col-md-3">
+                <h3 class="d-flex align-items-center gap-2 m-0">
+                  <img src="./warning.png" style="width: 24px;" alt="urgent"> Urgent
+                </h3>
+              </div>
+              <div class="col-md-9">
+                <p>Il ne vous reste que 3 jours pour remplir la déclaration nominative annuelle des
+                  salaires (DNAS). Pour faire votre déclaration, <a href="#">cliquez ici.</a></p>
+              </div>
+            </div>
           </div>
+          
           <div class="row g-0">
-          <div class="bd2 col-md-4 p-3  border text-center">
-            <h4>Messagerie</h4>
-            <a href="mailto:"><img src="./envelope-at.svg" alt="lettre"></a>
-            <p class="m-0">Vous avez 2 messages non-lus.</p>
+            <div class="bd2 col-md-4 p-3  border text-center">
+              <h4>Messagerie</h4>
+              <a href="mailto:"><img src="./envelope-at.svg" alt="lettre"></a>
+              <p class="m-0">Vous avez 2 messages non-lus.</p>
+            </div>
+            <div class="col-md-7 offset-md-1  bd3  border">
+              <h4>Contact PRO BTP</h4>
+              <ul class="list-unstyled p-0 m-0">
+                <li class="d-flex align-items-center gap-2 mb-2"><img src="./person.svg" alt="tete">
+                  <p class="m-0">Votre Conseiller: Jean Ducon</p>
+                </li>
+                <li class="d-flex align-items-center gap-2 mb-2"><img src="./telephone.svg" alt="tel">
+                  <p class="m-0">04 04 04 04 04</p>
+                </li>
+                <li class="d-flex align-items-center gap-2"><img src="./envelope-at.svg" alt="mail">
+                  <a href="mailto:hilton.paris@gmail.com">Envoyer un mail à mon conseiller</a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-8  bd3  border">
-            <h4>Contact PRO BTP</h4>
-            <ul class="list-unstyled p-0 m-0">
-              <li class="d-flex align-items-center gap-2 mb-2"><img src="./person.svg" alt="tete">
-                <p class="m-0">Votre Conseiller: Jean Ducon</p>
-              </li>
-              <li class="d-flex align-items-center gap-2 mb-2"><img src="./telephone.svg" alt="tel">
-                <p class="m-0">04 04 04 04 04</p>
-              </li>
-              <li class="d-flex align-items-center gap-2"><img src="./envelope-at.svg" alt="mail">
-                <a href="mailto:hilton.paris@gmail.com">Envoyer un mail à mon conseiller</a>
-              </li>
-            </ul>
-          </div>
-        </div>
         </div>
       </div>
 
@@ -122,63 +129,63 @@
             <img src="./flag.svg" alt="drapeau" style="width: 24px;" class="mx-2 mt-1">
             <h4 class="m-0">Dernières opérations</h4>
           </div>
-                      <div class="table-responsive">
+          <div class="table-responsive">
 
-          <table class="table table-bordered text-start">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Objet</th>
-                <th class="text-center">Numéro d'opération</th>
-                <th>Auteur</th>
-                <th>État</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>08/03/2014</td>
-                <td>Mise à jour</td>
-                <td class="text-center">17</td>
-                <td>Profil 2</td>
-                <td>Brouillon <img src="./flower2.svg" alt="etoile"></td>
-              </tr>
-              <tr>
-                <td>28/02/2014</td>
-                <td>Affiliation</td>
-                <td class="text-center">16</td>
-                <td>Profil 1</td>
-                <td>Brouillon <img src="./flower2.svg" alt="etoile"></td>
-              </tr>
-              <tr>
-                <td>27/02/2014</td>
-                <td>Mise à jour</td>
-                <td class="text-center">15</td>
-                <td>ADMIN</td>
-                <td>Validé <img src="./check.svg" alt="check"></td>
-              </tr>
-              <tr>
-                <td>25/02/2014</td>
-                <td>Mise à jour</td>
-                <td class="text-center">14</td>
-                <td>Profil 1</td>
-                <td>Validé <img src="./check.svg" alt="check"></td>
-              </tr>
-              <tr>
-                <td>10/02/2014</td>
-                <td>DNAS</td>
-                <td class="text-center">13</td>
-                <td>ADMIN</td>
-                <td>Validé <img src="./check.svg" alt="check"></td>
-              </tr>
-              <tr>
-                <td>23/01/2014</td>
-                <td>Arrêt de travail</td>
-                <td class="text-center">12</td>
-                <td>Profil 2</td>
-                <td>Validé <img src="./check.svg" alt="check"></td>
-              </tr>
-            </tbody>
-          </table>
+            <table class="table table-bordered table-sm text-start">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Objet</th>
+                  <th class="text-center">Numéro d'opération</th>
+                  <th>Auteur</th>
+                  <th>État</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>08/03/2014</td>
+                  <td>Mise à jour</td>
+                  <td class="text-center">17</td>
+                  <td>Profil 2</td>
+                  <td>Brouillon <img src="./flower2.svg" alt="etoile"></td>
+                </tr>
+                <tr>
+                  <td>28/02/2014</td>
+                  <td>Affiliation</td>
+                  <td class="text-center">16</td>
+                  <td>Profil 1</td>
+                  <td>Brouillon <img src="./flower2.svg" alt="etoile"></td>
+                </tr>
+                <tr>
+                  <td>27/02/2014</td>
+                  <td>Mise à jour</td>
+                  <td class="text-center">15</td>
+                  <td>ADMIN</td>
+                  <td>Validé <img src="./check.svg" alt="check"></td>
+                </tr>
+                <tr>
+                  <td>25/02/2014</td>
+                  <td>Mise à jour</td>
+                  <td class="text-center">14</td>
+                  <td>Profil 1</td>
+                  <td>Validé <img src="./check.svg" alt="check"></td>
+                </tr>
+                <tr>
+                  <td>10/02/2014</td>
+                  <td>DNAS</td>
+                  <td class="text-center">13</td>
+                  <td>ADMIN</td>
+                  <td>Validé <img src="./check.svg" alt="check"></td>
+                </tr>
+                <tr>
+                  <td>23/01/2014</td>
+                  <td>Arrêt de travail</td>
+                  <td class="text-center">12</td>
+                  <td>Profil 2</td>
+                  <td>Validé <img src="./check.svg" alt="check"></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
@@ -192,17 +199,20 @@
 
           <div class="imp d-flex align-items-center gap-2 mb-2">
             <img src="./caret-right.svg" alt="fleche">
-            <p class="m-0"><span class="fw-bold">Nouveau:</span> Paiement des cotisations par chèque ou prélèvement à l'échéance, c'est vous qui choisissez!</p>
+            <p class="m-0"><span class="fw-bold">Nouveau:</span> Paiement des cotisations par chèque ou prélèvement à
+              l'échéance, c'est vous qui choisissez!</p>
           </div>
 
           <div class="imp d-flex align-items-center gap-2 mb-2">
             <img src="./caret-right.svg" alt="fleche">
-            <p class="m-0"><span class="fw-bold">Arrêt de travail > 90 jours:</span> Ce qui change au 1er janvier 2014</p>
+            <p class="m-0"><span class="fw-bold">Arrêt de travail > 90 jours:</span> Ce qui change au 1er janvier 2014
+            </p>
           </div>
 
           <div class="imp d-flex align-items-center gap-2 mb-2">
             <img src="./caret-right.svg" alt="fleche">
-            <p class="m-0"><span class="fw-bold">Exonérations sociales et fiscales:</span> Conformité des contrats prévoyance / santé</p>
+            <p class="m-0"><span class="fw-bold">Exonérations sociales et fiscales:</span> Conformité des contrats
+              prévoyance / santé</p>
           </div>
 
           <div class="imp d-flex align-items-center gap-2">
@@ -214,4 +224,5 @@
     </section>
   </div>
 </body>
+
 </html>
