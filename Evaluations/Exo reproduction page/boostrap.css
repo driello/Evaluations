@@ -1,0 +1,12 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: rgb(211, 207, 207);
+}
+
+nav {
+    border: 1px solid black;
+    background: rgb(215, 211, 211);
+}

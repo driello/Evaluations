@@ -1,0 +1,160 @@
+ALOGO CUISSON DES PATES
+
+j' ai a disposition, une casserole, une plaque de cuisson, de l'eau, du sel, un paquet de pates, une cuillere en bois,une cuillere a café, une fourchette une passoire, un evier avec robinet d'eau, une poubelle
+je définis un temps de cuisson
+je prends la casserole, je la met sous le robinet
+j'ouvre le robinet
+je met de l'eau jusqu'à remplir la casserole au trois quart
+j'arrete le robinetje prend la cuillere à café
+je la plonge dans le sel
+je verse le sel dans la casserole avec l'eau
+j'attrape la casserole , je la pose sur la plaque de cuisson
+j'allume la plaque de cuisson
+quand l'eau arrive à ébullition, soit 100°c,
+j'ouvre le paquet de pates, je verse les pates dans l'eau chaude
+je jette le sachet dans la poubelle
+je prend la cuillere en bois et je remue les pates dans l'eau
+je mes un minuteur avec le temps de cuisson définis
+arrivé à la moitié du temps de cuisson , je remue les pates 
+je prend la passoire, je la pose dans l'évier
+je verifie le temps de cuisson
+je remue les pates dans l'eau 
+une fois arrivé a la fin du temps, je prend la fourchette
+je prend une pate dans la casserole
+je jette la pate sur le mur
+
+si la pate reste collée au mur, je pose la fourchette
+j'arrete la plaque de cuisson,
+je prend la casserole 
+je verse les pates dans la passoir dans l'évier
+
+sinon je patiente une minute
+je prends la fourchette 
+je prend une pate dans la casserole
+je jette la pate sur le mur
+
+si la pate reste collée au mur, je pose la fourchette
+j'arrete la plaque de cuisson,
+je prend la casserole 
+je verse les pates dans la passoir dans l'évier
+
+
+variiables à créer: 
+ casserole,  plaque de cuisson, du sel, un paquet de pates, 
+une cuillere en bois, une cuillere a café, une fourchette une passoire, un evier avec robinet d'eau, une poubelle
+temps de cuisson = 10min
+
+
+
+
+But : calculer la somme des entiers de 1 à N.
+
+Variables :
+    N, i, somme en entier
+
+Début
+    somme ← 0
+    Lire N
+    Pour i de 1 à N faire
+        somme ← somme + i
+    Fin Pour
+    Afficher "La somme est : ", somme
+Fin
+
+
+Crtiques : 
+
+👉 Comment le lire :
+Variables : On définit qu’on a 3 entiers : N (la limite), i (compteur), somme (le résultat).
+somme ← 0 : On initialise la variable somme à 0.
+Lire N : L’utilisateur doit entrer un nombre (ex. N = 5).
+Pour i de 1 à N faire : C’est une boucle → on répète les instructions pour i=1,2,3… jusqu’à N.
+somme ← somme + i : On ajoute chaque valeur de i à somme.
+Quand i=1 → somme = 0+1 = 1
+Quand i=2 → somme = 1+2 = 3
+Quand i=3 → somme = 3+3 = 6 … etc.
+Fin Pour : Fin de la boucle.
+Afficher "La somme est : ", somme → On montre le résultat à l’écran.
+Si N=5 → résultat = 15.
+
+
+
+
+But : trouver le maximum d’un tableau de nombres.
+
+Variables :
+    T en tableau d’entiers
+    N, i, max en entier
+
+Début
+    Lire N
+    Lire les N valeurs dans T
+    max ← T[1]
+    Pour i de 2 à N faire
+        Si T[i] > max alors
+            max ← T[i]
+        Fin Si
+    Fin Pour
+    Afficher "Le maximum est : ", max
+Fin
+
+
+Critiques:
+
+
+
+
+👉 Comment le lire :
+Variables :
+T = tableau de nombres (exemple : [5, 12, 7, 20, 9])
+N = taille du tableau (ici 5).
+max = on va stocker la plus grande valeur.
+Lire N : L’utilisateur dit combien il y a de valeurs (ici 5).
+Lire les N valeurs dans T : On remplit le tableau avec les nombres donnés.
+max ← T[1] : On suppose au départ que le maximum est le 1er élément (ici 5).
+Pour i de 2 à N : On parcourt le tableau à partir du 2e élément.
+Si un élément est plus grand que max, on remplace max.
+Exemple :
+T[2]=12 > 5 → max=12
+T[3]=7 > 12 ? Non → max reste 12
+T[4]=20 > 12 → max=20
+T[5]=9 > 20 ? Non → max reste 20
+Afficher max → Résultat : 20.
+
+
+
+
+
+
+Connexion utilisateur
+
+variable: 
+user = nom d'utilisateur
+password = mot de passe
+
+Script
+lire user and password
+if user is in data, and if password is the good
+connexion start
+else connexion failed
+
+
+
+
+
+
+Comment on rentre dans une soiree privée
+
+variable :  N Nombre de client
+            V Videur
+
+
+            Script:
+ 
+N arrive devant la boite
+V compte N
+If N < 2 
+N ne rentre pas
+else N rentre
+
+
