@@ -4,12 +4,16 @@
 }
 header {
     background: rgb(211, 207, 207);
+    margin: 0;
+    padding: 0;
 
 }
 
 nav {
  
     background: rgb(215, 211, 211);
+    margin: 0;
+    padding: 0;
 }
 table {
     font-size: 0.8rem;
