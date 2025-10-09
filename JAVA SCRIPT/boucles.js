@@ -43,7 +43,7 @@ console.log(`le legume ${legumeatrouver} est présent ${count} fois`);
 
 // ecrire plusieurs fois ha
 
-let ha = "▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒DIEGO░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░";
+let ha = "▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒BEEWEB░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░";
 let word="" ;
 
 for (i=0 ; i < 440 ; i++){
@@ -53,4 +53,14 @@ console.log(word);
 
 // 
 
+
+let d =0;       // j'initialise la variable d
+while (d < 10){ // tant que d inferieur à 1O
+    console.log(`Bonjour` + d) // j'affiche bonjour 
+    d = d + 1;                // + d jusqu'à 10 (condition)
+}
+
+for (r = 0; r < 10; r++){
+    console.log(`Bonjour`+ r);
+}
 
