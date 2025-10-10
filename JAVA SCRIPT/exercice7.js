@@ -27,22 +27,20 @@ console.log("Avant tri :", tableau);
     FONCTION tri_a_bulles(tableau)
 */
 function triABulles(tableau) {
-    let n = tableau.length;             // longueur du tableau
     let echange = true;                 // permet de savoir si un échange a eu lieu
 
     while (echange) {                   // tant qu'au moins un échange a lieu...
         echange = false;                // ...on commence la passe en supposant "pas d'échange"
-
+console.log(tableau);
         //  on parcourt le tableau en COMMENÇANT PAR LA FIN
-        for (let i = n - 1; i > 0; i--) {     // on compare chaque élément avec celui d'avant
+        for (let i = tableau.length -1; i > 0; i--) {     // on compare chaque élément avec celui d'avant
             if (tableau[i] < tableau[i - 1]) {   // si l'ordre est inversé (valeur de droite < valeur de gauche)
-                const temp = tableau[i];         // sauvegarde temporaire
+                let temp = tableau[i];         // sauvegarde temporaire
                 tableau[i] = tableau[i - 1];     // décalage vers la droite
                 tableau[i - 1] = temp;           // remise de la valeur plus petite à gauche
                 echange = true;                  // on a bougé → on refera une passe
             }
         }
-        n = n - 1;   // la dernière case est fixée (plus besoin d'y revenir)
     }
      return tableau;  // on renvoie le tableau trié
 }

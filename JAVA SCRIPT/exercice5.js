@@ -1,3 +1,5 @@
+
+
 function rechercheOccurences(t, x){
     let positionliste= [];
     for (i = 0; i < t.length; i ++){  // initialisation à zero, tant que i reste inferieur a la longueur du tableau, incrementation de 1

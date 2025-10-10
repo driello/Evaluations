@@ -37,25 +37,25 @@ let bonEtudiant = [];
 FIN POUR
  */
 for (let i = 0; i < etudiants.length; i++) {
-    if (etudiants[i].note > 15) {
-        bonEtudiant.push(etudiants[i]);
+    if (etudiants[i].note > 15) {       // si etudiant note > 15
+        bonEtudiant.push(etudiants[i]); // je push etudiants[i] dans mon tableau bonEtudiant
     }
 }
 /* Étape 2 : Trier bonsEtudiants par ordre alphabétique du nom (tri à bulles)
 
-POUR i ← 0 À longueur(bonsEtudiants) - 2 FAIRE
-  POUR j ← i+1 À longueur(bonsEtudiants) - 1 FAIRE
+POUR i ← 0 À i < longueur(bonsEtudiants) - 2 FAIRE
+  POUR j ← i+1 À  j < longueur(bonsEtudiants) - 1 FAIRE
       SI nom(bonsEtudiants[i]) > nom(bonsEtudiants[j]) ALORS
           échanger bonsEtudiants[i] et bonsEtudiants[j]
       FIN SI
   FIN POUR
 FIN POUR
 */
-for (i = 0; i < bonEtudiant.length; i++) {
-    for (j = i +1; j < bonEtudiant.length; j++) {
-        if (bonEtudiant[i].nom > bonEtudiant[j].nom) {
-            let temp = bonEtudiant[i];
-            bonEtudiant[i] = bonEtudiant[j];
+for (i = 0; i < bonEtudiant.length; i++) { //j'initialise [] bonEtudiant
+    for (j = i +1; j < bonEtudiant.length; j++) { // je intialise la comparaison i case 1, j case 2 (i + 1)
+        if (bonEtudiant[i].nom > bonEtudiant[j].nom) { // si i > j
+            let temp = bonEtudiant[i];                // i dans temp
+            bonEtudiant[i] = bonEtudiant[j];          
             bonEtudiant[j] = temp;
         }
     }
@@ -73,7 +73,6 @@ for (i = 0; i < bonEtudiant.length; i ++){
     somme= somme + bonEtudiant[i].note; 
 }
 let moyenne = somme / bonEtudiant.length;
-
 
 /**
  // Étape 4 : Afficher le résultat
