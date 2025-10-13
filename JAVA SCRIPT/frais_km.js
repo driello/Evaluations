@@ -187,7 +187,7 @@ DÉBUT
     */
    console.log("--- Résultat final ---");
    console.log(`Montant total des frais :, ${cout_total}, €`);
-   console;log(`Prix par passager`)
+   console.log(`Prix par passager`)
 
     /*
     // Retour d'un objet avec les résultats
