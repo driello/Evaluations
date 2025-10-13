@@ -26,13 +26,29 @@ Ecrire un algorithme qui affiche le motif suivant :
 
 FIN
 */
-let ligne ;
+let ligne;
 for (i = 0; i < 6; i++) {
-    ligne= "";
+    ligne = "";
     for (j = 0; j < 10; j++) {
-        if ((i + j) % 2)
-            ligne += ("*");
-        else ligne += ("#");
+        if ((i + j) % 2===0)
+            ligne += ("#");
+        else ligne += ("*");
     }
     console.log(ligne);
+}
+
+
+console.log("-----------------------")
+
+
+let lignee;
+for (i = 0; i < 6; i++) {
+    lignee = "";
+    for (j = 0; j < 10; j++) {
+        if ((i + j) % 2 === 0)
+            lignee += ("BE");
+
+        else lignee += ("WEB");
+    }
+    console.log(lignee);
 }

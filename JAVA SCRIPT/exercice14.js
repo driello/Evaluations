@@ -70,7 +70,7 @@ moyenne ← somme / longueur(bonsEtudiants)
 */
 let somme =0;
 for (i = 0; i < bonEtudiant.length; i ++){
-    somme= somme + bonEtudiant[i].note; 
+     somme += bonEtudiant[i].note; 
 }
 let moyenne = somme / bonEtudiant.length;
 

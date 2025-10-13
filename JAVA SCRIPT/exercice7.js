@@ -31,9 +31,9 @@ function triABulles(tableau) {
 
     while (echange) {                   // tant qu'au moins un échange a lieu...
         echange = false;                // ...on commence la passe en supposant "pas d'échange"
-console.log(tableau);
+        console.log(tableau);
         //  on parcourt le tableau en COMMENÇANT PAR LA FIN
-        for (let i = tableau.length -1; i > 0; i--) {     // on compare chaque élément avec celui d'avant
+        for (let i = tableau.length - 1; i > 0; i--) {     // on compare chaque élément avec celui d'avant
             if (tableau[i] < tableau[i - 1]) {   // si l'ordre est inversé (valeur de droite < valeur de gauche)
                 let temp = tableau[i];         // sauvegarde temporaire
                 tableau[i] = tableau[i - 1];     // décalage vers la droite
@@ -42,7 +42,7 @@ console.log(tableau);
             }
         }
     }
-     return tableau;  // on renvoie le tableau trié
+    return tableau;  // on renvoie le tableau trié
 }
 /* FIN */
 triABulles(tableau);  // appel de la fonction de tri
@@ -50,4 +50,33 @@ console.log("Après tri :", tableau);
 
 
 
+for (let i = 0; i <= 9; i += 3) {
+    console.log(i);
+}
 
+
+
+
+let tab = [2, 3, 1, 8, 5, 7, 0, 9];
+let change = true;
+
+console.log(tab);
+
+function tri_a_bulles(tab) {
+
+    while (change) {
+        change = false;
+        for (i = 0; i < tab.length; i++) {
+            if (tab[i] > tab[i + 1]) {
+                let tempo = tab[i];
+                tab[i] = tab[i + 1];
+                tab[i + 1] = tempo;
+                change = true;
+            }
+
+        }
+    }
+    return tab;
+}
+tri_a_bulles(tab);
+console.log(tab);

@@ -10,7 +10,7 @@ ceci en un minimum de coups, tout en respectant les règles suivantes :
 – on ne peut placer un disque que sur un autre disque plus grand que lui ou sur une tour
 vide.
 Dans l'état initial, les n disques sont placés sur la tour « départ ». Dans l’état final, tous les
-disques se retrouvent placés dans le même ordre sur la tour « arrivée ». */ 
+disques se retrouvent placés dans le même ordre sur la tour « arrivée ». */
 
 /*
 variable tour 1, tour 2, tour 3
@@ -26,11 +26,11 @@ tour 3 remplie avec les disques du + grand au + petit
 */
 /*
  VARIABLES :
-    disque            // nombre de disques
+    n            // nombre de disques
     tour1, tour2, tour3   // les trois tours
     coups <- 0   // compteur de mouvements*/
-let disque = 6;
-let tour1 = [];
+let n = 6;
+let tour1 = [6,5,4,3,2,1];
 let tour2 = [];
 let tour3 = [];
 let coups = 0;
@@ -39,9 +39,9 @@ let coups = 0;
     AFFICHER "Déplacer le disque du haut de", source, "vers", destination
     coups <- coups + 1
 FIN PROC */
-function deplacer(source, destination){
+function deplacer(source, destination) {
     console.log(`Deplacer le disque du haut de ${source} vers ${destination}`);
-    coups = coups += 1;
+    coups += 1;
 }
 
 /*PROC hanoi(n, depart, arrivee, intermediaire)
@@ -58,12 +58,17 @@ function deplacer(source, destination){
         hanoi(n-1, intermediaire, arrivee, depart)
     FIN SI
 FIN PROC*/
-function hanoi(disque, source, arrivee, destination){
-    if (disque == 1){
-        disque = (tour1, tour2);
+function hanoi(n, tour1, tour3, tour2) {
+    if (n === 1) {
+        deplacer(tour1, tour3);
     }
-    else deplacer (disque-1)
+    else {
+        hanoi(n - 1, tour1, tour2, tour3);
+        deplacer(tour2, tour3);
+        hanoi(n - 1, tour2, tour3, tour1);
+    }
 }
+
 
 /*
 // PROGRAMME PRINCIPAL
@@ -88,6 +93,15 @@ FIN
  */
 
 
+    console.log("Etat inbitial:");
+    console.log(tour1, tour2, tour3);
+
+    hanoi(n, tour1, tour2, tour3);
+
+    console.log("Etat final: ");
+    console.log(tour1, tour2, tour3);
+    console.log(`Nombre total de coups ${coups}`);
+    console.log(`Minium théorique : ${2 ** n - 1}`);
 
 
 
