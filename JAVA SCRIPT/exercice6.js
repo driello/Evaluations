@@ -36,8 +36,8 @@ Palindrome.
 Écrire un algorithme qui vérifie si le mot entré par l’utilisateur est un palindrome.
 Afficher “true” si c’est le cas, “false” dans le cas contraire. */
 
-let mot= "fraise";
-let motinverse ="";
+let mot = "";
+let motinverse = "";
 console.log (`Ce mot : ${mot}, est un palindrome`)
 
 for (i=mot.length -1 ; i >= 0; i --){ // je decoupe le mot depuis la fin

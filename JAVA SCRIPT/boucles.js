@@ -44,23 +44,37 @@ console.log(`le legume ${legumeatrouver} est présent ${count} fois`);
 // ecrire plusieurs fois ha
 
 let ha = "▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒BEEWEB░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░▓▒░";
-let word="" ;
+let word = "";
 
-for (i=0 ; i < 440 ; i++){
-    word += ha ; 
+for (i = 0; i < 40; i++) {
+    for (j = i + 2; j < 10; j++) {
+        word += ha;
+    }
 }
 console.log(word);
 
 // 
 
 
-let d =0;       // j'initialise la variable d
-while (d < 10){ // tant que d inferieur à 1O
+let d = 0;       // j'initialise la variable d
+while (d < 10) { // tant que d inferieur à 1O
     console.log(`Bonjour` + d) // j'affiche bonjour 
     d = d + 1;                // + d jusqu'à 10 (condition)
 }
 
-for (r = 0; r < 10; r++){
-    console.log(`Bonjour`+ r);
+for (r = 0; r < 10; r++) {
+    console.log(`Bonjour` + r);
 }
 
+
+
+let mot = "KAYAK";
+let motInverse = "";
+console.log(mot);
+for (i = mot.length - 1; i >= 0; i--) {
+    motInverse += mot[i];
+}
+if (motInverse === mot) {
+    console.log(true);
+}
+else console.log(false);
