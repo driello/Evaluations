@@ -48,6 +48,7 @@ function triABulles(tableau) {
 triABulles(tableau);  // appel de la fonction de tri
 console.log("Après tri :", tableau);
 
+console.log("----------------------------------")
 
 
 for (let i = 0; i <= 9; i += 3) {
@@ -55,28 +56,28 @@ for (let i = 0; i <= 9; i += 3) {
 }
 
 
-
+console.log("----------------------------------")
 
 let tab = [2, 3, 1, 8, 5, 7, 0, 9];
-let change = true;
 
-console.log(tab);
+console.log(`Tableau avant tri: ${tab}`);
+function tribulle (tab){
+       let change = true;
 
-function tri_a_bulles(tab) {
-
-    while (change) {
-        change = false;
-        for (i = 0; i < tab.length; i++) {
-            if (tab[i] > tab[i + 1]) {
-                let tempo = tab[i];
-                tab[i] = tab[i + 1];
-                tab[i + 1] = tempo;
+while (change){
+    change = false;
+    for (i = 0; i < tab.length -1; i++){
+            if (tab[i] < tab[i - 1]){
+                tempo = tab[i];
+                tab[i] = tab[i - 1];
+                tab[i - 1] = tempo;
                 change = true;
             }
-
-        }
+        }       
     }
     return tab;
 }
-tri_a_bulles(tab);
-console.log(tab);
+tribulle (tab);
+console.log(`Tableau après tri: ${tab}`);
+
+

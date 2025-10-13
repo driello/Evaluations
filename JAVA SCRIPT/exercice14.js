@@ -19,7 +19,7 @@ let etudiants = [
     { nom: 'Kaique', note: 17 },
     { nom: 'Angélique', note: 18 },
     { nom: 'Dorian', note: 15 },
-    { nom: 'emmanuel', note: 16 },
+    { nom: 'Emmanuel', note: 16 },
     { nom: 'Jeremy', note: 13 },
     { nom: 'Sylvain', note: 17 },
     { nom: 'Yann', note: 15 },
@@ -52,10 +52,10 @@ POUR i ← 0 À i < longueur(bonsEtudiants) - 2 FAIRE
 FIN POUR
 */
 for (i = 0; i < bonEtudiant.length; i++) { //j'initialise [] bonEtudiant
-    for (j = i +1; j < bonEtudiant.length; j++) { // je intialise la comparaison i case 1, j case 2 (i + 1)
+    for (j = i + 1; j < bonEtudiant.length; j++) { // je intialise la comparaison i case 1, j case 2 (i + 1)
         if (bonEtudiant[i].nom > bonEtudiant[j].nom) { // si i > j
             let temp = bonEtudiant[i];                // i dans temp
-            bonEtudiant[i] = bonEtudiant[j];          
+            bonEtudiant[i] = bonEtudiant[j];
             bonEtudiant[j] = temp;
         }
     }
@@ -68,9 +68,9 @@ POUR i ← 0 À longueur(bonsEtudiants) - 1 FAIRE
 FIN POUR
 moyenne ← somme / longueur(bonsEtudiants)
 */
-let somme =0;
-for (i = 0; i < bonEtudiant.length; i ++){
-     somme += bonEtudiant[i].note; 
+let somme = 0;
+for (i = 0; i < bonEtudiant.length; i++) {
+    somme += bonEtudiant[i].note;
 }
 let moyenne = somme / bonEtudiant.length;
 
@@ -87,7 +87,73 @@ FIN
  */
 
 console.log("Etudiants avec note > 15 triés par ordre alphabétique :");
-for ( i = 0; i < bonEtudiant.length; i++){
+for (i = 0; i < bonEtudiant.length; i++) {
     console.log(`${bonEtudiant[i].nom}, ${bonEtudiant[i].note}`);
 }
-console.log(`Moyenne : ${moyenne}`);
+console.log(`Moyenne des meilleurs étudiants: ${moyenne}`);
+
+
+
+
+console.log("--------------------------------------");
+
+
+
+let ligne;
+for (i = 0; i < 10; i++) {
+    ligne = "";             // ligne est placé après la création de i
+    for (j = 0; j < 10; j++) {
+        if ((i + j) % 2 === 0) {
+            ligne += ("*");
+        } else ligne += ("#");
+    }
+    console.log(ligne);  // attention à bien placé console.log dans la boucle!!!!
+}
+
+console.log("--------------------------------------");
+
+let etudiant = [
+      { nom: 'Agathe', note: 14 },
+    { nom: 'Wlad', note: 17 },
+    { nom: 'Yohann', note: 16 },
+    { nom: 'Laureline', note: 17 },
+    { nom: 'Christian', note: 12 },
+    { nom: 'Yannick', note: 19 },
+    { nom: 'Kaique', note: 17 },
+    { nom: 'Angélique', note: 18 },
+    { nom: 'Dorian', note: 15 },
+    { nom: 'Emmanuel', note: 16 },
+    { nom: 'Jeremy', note: 13 },
+    { nom: 'Sylvain', note: 17 },
+    { nom: 'Yann', note: 15 },
+    { nom: 'Amin', note: 16 }
+];
+
+let bonsEtudiants = [];
+
+for (i = 0; i < etudiant.length; i ++){
+    if(etudiant[i].note > 15){
+        bonsEtudiants.push(etudiant[i]);
+    }
+}
+console.log(bonsEtudiants);
+
+for (i = 0; i < bonsEtudiants.length; i ++){
+    for (j = i + 1; j < bonsEtudiants.length; j ++){
+        if (bonsEtudiants[i].nom > bonsEtudiants[j].nom){
+            let tempor = bonsEtudiants[i];
+            bonsEtudiants[i] = bonsEtudiants[j];
+            bonsEtudiants[j] = tempor;
+        }
+    }
+console.log(`${bonsEtudiants[i].nom} ${bonsEtudiants[i].note}`);
+
+}
+let moyenneBonsEleves;
+let total= 0;
+
+for (i= 0; i < bonsEtudiants.length; i ++){
+    total += bonsEtudiants[i].note;
+    moyenneBonsEleves = total / bonsEtudiants.length;
+}
+console.log(`La moyenne des bons élèves est de : ${moyenneBonsEleves}`);
