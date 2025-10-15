@@ -8,9 +8,6 @@ Garder ceux dont la note > 15
 → tout en MAJUSCULE + sans accents
 Trier A→Z par nom (sans sort)
 
-– En cas d’égalité de nom, trier par note croissante
-Calculer la moyenne des notes retenues (sans reduce)
-
 # ============================
 # Exercice 14 — PSEUDO-CODE
 # Sans sort / filter / reduce
@@ -138,44 +135,44 @@ sansAccent   ← ['A','A','A','A','A','A','C','E','E','E','E','I','I','I','I','O
 const lettres = "abcdefghijklmnopqrstuvwxyz";
 const majuscules = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-let accentuees = ['à', 'â', 'ä', 'á', 'ã', 'å', 'ç', 'é', 'è', 'ê', 'ë', 'î', 'ï',
+const accentuees = ['à', 'â', 'ä', 'á', 'ã', 'å', 'ç', 'é', 'è', 'ê', 'ë', 'î', 'ï',
     'ì', 'í', 'ô', 'ö', 'ò', 'ó', 'õ', 'ù', 'û', 'ü', 'ú', 'ÿ', 'ý',
     'À', 'Â', 'Ä', 'Á', 'Ã', 'Å', 'Ç', 'É', 'È', 'Ê', 'Ë', 'Î', 'Ï', 'Ì', 'Í',
     'Ô', 'Ö', 'Ò', 'Ó', 'Õ', 'Ù', 'Û', 'Ü', 'Ú', 'Ÿ', 'Ý'];
 
-let sansAccent = ['A', 'A', 'A', 'A', 'A', 'A', 'C', 'E', 'E', 'E', 'E', 'I', 'I',
+const sansAccent = ['A', 'A', 'A', 'A', 'A', 'A', 'C', 'E', 'E', 'E', 'E', 'I', 'I',
     'I', 'I', 'O', 'O', 'O', 'O', 'O', 'U', 'U', 'U', 'U', 'Y', 'Y',
     'A', 'A', 'A', 'A', 'A', 'A', 'C', 'E', 'E', 'E', 'E', 'I', 'I', 'I',
     'I', 'O', 'O', 'O', 'O', 'O', 'U', 'U', 'U', 'U', 'Y', 'Y'];
 
 /*
-# --- Étape 1 : Filtrer (note > 15) ---
+# --- Étape 1 : Filtrer (note > 80) ---
 bonsEtudiants ← tableau_vide
 POUR i ← 0 À longueur(etudiants) - 1 FAIRE
-    SI etudiants[i].note > 15 ALORS
+    SI etudiants[i].note > 80 ALORS
         AJOUTER etudiants[i] DANS bonsEtudiants
     FIN SI
 FIN POUR
 */
-let bonsEtudiants = [];
+let bonsEtudiants = [];         // crée [] des bons étudiants
 
-for (i = 0; i < etudiants.length; i++) {
-    if (etudiants[i].note > 80) {
-        bonsEtudiants.push(etudiants[i]);
+for (i = 0; i < etudiants.length; i++) { // parcourt tous les étudiants (indice i de 0 à longueur-1)
+    if (etudiants[i].note > 80) {         // si la note de l’étudiant i est supérieure à 80
+        bonsEtudiants.push(etudiants[i]);  // on ajoute cet étudiant dans le tableau des “bons” étudiants
     }
 }
 console.log("Liste des étudiants avec note > 80 :");
 console.log(bonsEtudiants);
 
 /*
-# --- Étape 2 : Construire des CLÉS de tri normalisées (MAJ + sans accents) ---
-clesTri ← tableau_vide
+# --- Étape 2 : Construire les noms en majuscules (MAJ + sans accents) ---
+etudiantsMajuscule ← tableau_vide
 POUR i ← 0 À longueur(bonsEtudiants) - 1 FAIRE
     nomBrut ← bonsEtudiants[i].nom
-    cle     ← chaîne_vide
+    nomMajuscule    ← chaîne_vide
 
-    POUR k ← 0 À longueur(nomBrut) - 1 FAIRE
-        ch ← nomBrut[k]
+    POUR j ← 0 À longueur(nomBrut) - 1 FAIRE
+        ch ← nomBrut[j]
         remplace ← FAUX
 
         # 2.1 Enlever accents (accentuees → sansAccent)
@@ -198,40 +195,40 @@ POUR i ← 0 À longueur(bonsEtudiants) - 1 FAIRE
             # (si déjà majuscule ou caractère non-lettre, garder tel quel)
         FIN SI
 
-        cle ← cle + ch
+        nomMajuscule ← nomMajuscule + ch
     FIN POUR
 
-    AJOUTER cle DANS clesTri
+    AJOUTER nomMajuscule DANS etudiantsMajuscule
 FIN POUR
 */
 
 console.log("TRI des étudiants, sans accents, en majuscules");
 
-const etudiantsMajuscule = [];                  // crée un [] pour stocker noms modifiés en Maj
-for (i = 0; i < bonsEtudiants.length; i++) {   // parcours chaque étudiant du tableau
-    let nomBrut = bonsEtudiants[i].nom;        //  variable récupère les noms d'origine
-    let nomMajuscule = "";                              // string pour construire les mots 
-    for (k = 0; k < nomBrut.length; k++) {     // parcours chaque caractère du mot 
-        let ch = nomBrut[k];                   // variable pour assigner les caractères (ch)
-        let remplace = false;                  // indique si la lettre a déjà était changée 
+const etudiantsMajuscule = [];                    // crée un [] pour stocker noms modifiés en Maj
+for (i = 0; i < bonsEtudiants.length; i++) {      // parcours chaque étudiant du tableau
+    let nomBrut = bonsEtudiants[i].nom;           //  variable récupère les noms d'origine 
+    let nomMajuscule = "";                        // string pour construire les mots 
+    for (j = 0; j < nomBrut.length; j++) {        // parcours chaque caractère du mot 
+        let ch = nomBrut[j];                      // variable pour assigner les caractères (ch)
+        let remplace = false;                     // indique si la lettre a déjà était changée 
         for (a = 0; a < accentuees.length; a++) { // parcours les caractères accentués [] 
             if (ch === accentuees[a]) {           // si ch = caractères accentués
                 ch = sansAccent[a];               // ch est remplacé par son index dans [] sansAccent
-                remplace = true;                   // on note qu’on l’a remplacé
-                break;                           // sort de la boucle des accents
+                remplace = true;                  // on note qu’on l’a remplacé
+                break;                            // sort de la boucle des accents
             }
         }
-        if (remplace === false) {                   // si pas d'accent remplacé   
-            for (b = 0; b < lettres.length; b++) {  // parcours [] des minuscules 
-                if (ch === lettres[b]) {            // si ch = une minuscule
-                    ch = majuscules[b];             // ch est remplacé par son index [] majuscules
-                    break;                          // sort de la boucle
+        if (remplace === false) {                    // si pas d'accent remplacé   
+            for (b = 0; b < lettres.length; b++) {   // parcours [] des minuscules 
+                if (ch === lettres[b]) {             // si ch = une minuscule
+                    ch = majuscules[b];              // ch est remplacé par son index [] majuscules
+                    break;                           // sort de la boucle
                 }
             }
         }
         nomMajuscule += ch;   // reconstruit le nom avec les caractères modifiés en majuscule
     }
-    etudiantsMajuscule.push(nomMajuscule); //  stocke les noms modifiés [] etudiantsMajuscule
+    etudiantsMajuscule.push(nomMajuscule); //  stocke les noms modifiés dans [] etudiantsMajuscule
 }
 console.log(etudiantsMajuscule);
 console.log("Les noms en majuscules sont stockés dans le tableau etudiantsMajuscule");
@@ -239,8 +236,8 @@ console.log(bonsEtudiants);
 
 
 // Remplace les noms d'origine par les noms en majuscules
-for (let i = 0; i < bonsEtudiants.length; i++) {  
-  bonsEtudiants[i].nom = etudiantsMajuscule[i];  // échange les noms
+for (let i = 0; i < bonsEtudiants.length; i++) {
+    bonsEtudiants[i].nom = etudiantsMajuscule[i];  // échange les noms
 }
 
 console.log("Les noms en majuscules sont transferées dans le tableau bonsEtudiants");
@@ -257,12 +254,12 @@ POUR i ← 0 À longueur(bonsEtudiants) - 2 FAIRE
     FIN POUR
 FIN POUR
 */
-for (i = 0; i < bonsEtudiants.length; i ++){
-    for (j = i + 1; j < bonsEtudiants.length; j ++){
-        if (bonsEtudiants[i].nom > bonsEtudiants[j].nom){
-            temp = bonsEtudiants[i];
-            bonsEtudiants[i] = bonsEtudiants[j];
-            bonsEtudiants[j] = temp;
+for (i = 0; i < bonsEtudiants.length; i++) {    // boucle externe, je fixe la position de i
+    for (j = i + 1; j < bonsEtudiants.length; j++) { // boucle interne, compare i avec ceux d'après j
+        if (bonsEtudiants[i].nom > bonsEtudiants[j].nom) {  // si i > j
+            temp = bonsEtudiants[i];                      // je conserve i dans ma variable temporaire
+            bonsEtudiants[i] = bonsEtudiants[j];         // je deplace j a sa bonne place i
+            bonsEtudiants[j] = temp;                 // je sors i de la temp pour la mettre dans j   
         }
     }
 }
@@ -278,7 +275,7 @@ FIN POUR
 */
 
 console.log("Etudiants triés A-Z :")
-for (i = 0; i < bonsEtudiants.length; i ++){
+for (i = 0; i < bonsEtudiants.length; i++) {
     console.log(bonsEtudiants[i].nom, bonsEtudiants[i].note);
 }
 
@@ -300,12 +297,12 @@ AFFICHER "Moyenne :", moyenne
 
  */
 
-let somme =0 ;
-for (i = 0; i < bonsEtudiants.length; i ++){
-    somme += bonsEtudiants[i].note;
+let somme = 0;                               // j'initialise ma variable somme
+for (i = 0; i < bonsEtudiants.length; i++) { // parcours tableau bonsEtudiants
+    somme += bonsEtudiants[i].note;         // somme de toutes les notes de bons Etudiants
 }
-moyenne = somme / bonsEtudiants.length;
-console.log(`Moyenne des meilleurs étudiants :, ${moyenne.toFixed(2)}`); 
+moyenne = somme / bonsEtudiants.length;     // moyenne = somme / nombre d'étudiants (ou longueur du tableau)
+console.log(`Moyenne des meilleurs étudiants :, ${moyenne.toFixed(2)}`);
 
 // .toFixed() definit le nombre de decimal a fficher
 

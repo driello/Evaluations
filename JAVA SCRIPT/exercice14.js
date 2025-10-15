@@ -41,7 +41,7 @@ for (let i = 0; i < etudiants.length; i++) {
         bonEtudiant.push(etudiants[i]); // je push etudiants[i] dans mon tableau bonEtudiant
     }
 }
-        console.log("Tableau des bons étudiants", bonEtudiant);
+console.log("Tableau des bons étudiants", bonEtudiant);
 
 
 
@@ -64,7 +64,7 @@ for (i = 0; i < bonEtudiant.length; i++) { //j'initialise les index de [] bonEtu
         }
     }
 }
-    console.log("Tableau trié par ordre alphabétique", bonEtudiant);
+console.log("Tableau trié par ordre alphabétique", bonEtudiant);
 
 /**
  // Étape 3 : Calculer la moyenne des notes filtrées
@@ -119,7 +119,7 @@ for (i = 0; i < 10; i++) {
 console.log("--------------------------------------");
 
 let etudiant = [
-      { nom: 'Agathe', note: 14 },
+    { nom: 'Agathe', note: 14 },
     { nom: 'Wlad', note: 17 },
     { nom: 'Yohann', note: 16 },
     { nom: 'Laureline', note: 17 },
@@ -137,28 +137,28 @@ let etudiant = [
 
 let bonsEtudiants = [];
 
-for (i = 0; i < etudiant.length; i ++){
-    if(etudiant[i].note > 15){
+for (i = 0; i < etudiant.length; i++) {
+    if (etudiant[i].note > 15) {
         bonsEtudiants.push(etudiant[i]);
     }
 }
 console.log(bonsEtudiants);
 
-for (i = 0; i < bonsEtudiants.length; i ++){
-    for (j = i + 1; j < bonsEtudiants.length; j ++){
-        if (bonsEtudiants[i].nom > bonsEtudiants[j].nom){
+for (i = 0; i < bonsEtudiants.length; i++) {
+    for (j = i + 1; j < bonsEtudiants.length; j++) {
+        if (bonsEtudiants[i].nom > bonsEtudiants[j].nom) {
             let tempor = bonsEtudiants[i];
             bonsEtudiants[i] = bonsEtudiants[j];
             bonsEtudiants[j] = tempor;
         }
     }
-console.log(`${bonsEtudiants[i].nom} ${bonsEtudiants[i].note}`);
+    console.log(`${bonsEtudiants[i].nom} ${bonsEtudiants[i].note}`);
 
 }
 let moyenneBonsEleves;
-let total= 0;
+let total = 0;
 
-for (i= 0; i < bonsEtudiants.length; i ++){
+for (i = 0; i < bonsEtudiants.length; i++) {
     total += bonsEtudiants[i].note;
     moyenneBonsEleves = total / bonsEtudiants.length;
 }
@@ -170,118 +170,119 @@ console.log("--------------------------------------");
 console.log("CLASSEMENT DES ETUDIANTS DE HARVARD");
 console.log("Liste des étudiants");
 
- const students = [
-        { nom: "Alice", note: 85 },
-        { nom: "benjamin", note: 92 },
-        { nom: "Claire", note: 78 },
-        { nom: "david", note: 88 },
-        { nom: "Emma", note: 95 },
-        { nom: "fabien", note: 67 },
-        { nom: "Gabriel", note: 90 },
-        { nom: "helene", note: 73 },
-        { nom: "Isabelle", note: 82 },
-        { nom: "jacques", note: 76 },
-        { nom: "Kevin", note: 89 },
-        { nom: "laura", note: 91 },
-        { nom: "Marc", note: 84 },
-        { nom: "nathalie", note: 79 },
-        { nom: "Olivier", note: 87 },
-        { nom: "pierre", note: 93 },
-        { nom: "Quentin", note: 80 },
-        { nom: "roxane", note: 77 },
-        { nom: "Sophie", note: 94 },
-        { nom: "thomas", note: 86 },
-        { nom: "Ulysse", note: 81 },
-        { nom: "valerie", note: 75 },
-        { nom: "William", note: 83 },
-        { nom: "xavier", note: 70 },
-        { nom: "Yann", note: 88 },
-        { nom: "zoe", note: 92 },
-        { nom: "Adrien", note: 85 },
-        { nom: "brigitte", note: 78 },
-        { nom: "Camille", note: 89 },
-        { nom: "damien", note: 91 },
-        { nom: "Elise", note: 87 },
-        { nom: "françois", note: 76 },
-        { nom: "Gaëlle", note: 84 },
-        { nom: "hugo", note: 93 },
-        { nom: "Ingrid", note: 79 },
-        { nom: "julien", note: 88 },
-        { nom: "Karine", note: 82 },
-        { nom: "lucas", note: 90 },
-        { nom: "Mathilde", note: 95 },
-        { nom: "nicolas", note: 77 },
-        { nom: "Océane", note: 86 },
-        { nom: "paul", note: 80 },
-        { nom: "Quentin", note: 83 },
-        { nom: "rachel", note: 75 },
-        { nom: "Samuel", note: 92 },
-        { nom: "thibault", note: 89 },
-        { nom: "Ursula", note: 78 },
-        { nom: "vincent", note: 91 },
-        { nom: "Wendy", note: 87 },
-        { nom: "xena", note: 76 },
-        { nom: "Yasmine", note: 84 },
-        { nom: "zacharie", note: 93 },
-        { nom: "Amélie", note: 79 },
-        { nom: "bruno", note: 88 },
-        { nom: "Chloé", note: 82 },
-        { nom: "dylan", note: 90 },
-        { nom: "Estelle", note: 95 },
-        { nom: "fabrice", note: 77 },
-        { nom: "Géraldine", note: 86 },
-        { nom: "henri", note: 80 },
-        { nom: "Inès", note: 83 },
-        { nom: "jean", note: 75 },
-        { nom: "Kévin", note: 92 },
-        { nom: "léa", note: 89 },
-        { nom: "Mélanie", note: 78 },
-        { nom: "nathan", note: 91 },
-        { nom: "Ophélie", note: 87 },
-        { nom: "patrick", note: 76 },
-        { nom: "Quentin", note: 84 },
-        { nom: "rémi", note: 93 },
-        { nom: "Sarah", note: 79 },
-        { nom: "Earah", note: 79 },
-        { nom: "théo", note: 88 },
-        { nom: "Ugo", note: 82 },
-        { nom: "valentin", note: 90 },
-        { nom: "Wendy", note: 95 },
-        { nom: "xavier", note: 77 },
-        { nom: "Yohan", note: 86 },
-        { nom: "zoé", note: 80 },
-        { nom: "Antoine", note: 83 },
-        { nom: "bernadette", note: 75 },
-        { nom: "Cédric", note: 92 },
-        { nom: "diane", note: 89 },
-        { nom: "Élodie", note: 78 },
-        { nom: "franck", note: 91 },
-        { nom: "Guillaume", note: 87 },
-        { nom: "hélène", note: 76 },
-        { nom: "Isabelle", note: 84 },
-        { nom: "jules", note: 93 },
-        { nom: "Kevin", note: 79 },
-        { nom: "laetitia", note: 88 },
-        { nom: "Maxime", note: 82 },
-        { nom: "nadine", note: 90 },
-        { nom: "Olivier", note: 95 },
-        { nom: "pascal", note: 77 },
-        { nom: "Quentin", note: 86 },
-        { nom: "romain", note: 80 },
-        { nom: "Stéphanie", note: 83 },
-        { nom: "thomas", note: 75 },
-        { nom: "Ulysse", note: 92 },
-        { nom: "valérie", note: 89 }
-    ];
-    console.log(students);
-    
- 
+const students = [
+    { nom: "Alice", note: 85 },
+    { nom: "benjamin", note: 92 },
+    { nom: "Claire", note: 78 },
+    { nom: "david", note: 88 },
+    { nom: "Emma", note: 95 },
+    { nom: "fabien", note: 67 },
+    { nom: "Gabriel", note: 90 },
+    { nom: "helene", note: 73 },
+    { nom: "Isabelle", note: 82 },
+    { nom: "jacques", note: 76 },
+    { nom: "Kevin", note: 89 },
+    { nom: "laura", note: 91 },
+    { nom: "Marc", note: 84 },
+    { nom: "nathalie", note: 79 },
+    { nom: "Olivier", note: 87 },
+    { nom: "pierre", note: 93 },
+    { nom: "Quentin", note: 80 },
+    { nom: "roxane", note: 77 },
+    { nom: "Sophie", note: 94 },
+    { nom: "thomas", note: 86 },
+    { nom: "Ulysse", note: 81 },
+    { nom: "valerie", note: 75 },
+    { nom: "William", note: 83 },
+    { nom: "xavier", note: 70 },
+    { nom: "Yann", note: 88 },
+    { nom: "zoe", note: 92 },
+    { nom: "Adrien", note: 85 },
+    { nom: "brigitte", note: 78 },
+    { nom: "Camille", note: 89 },
+    { nom: "damien", note: 91 },
+    { nom: "Elise", note: 87 },
+    { nom: "françois", note: 76 },
+    { nom: "Gaëlle", note: 84 },
+    { nom: "hugo", note: 93 },
+    { nom: "Ingrid", note: 79 },
+    { nom: "julien", note: 88 },
+    { nom: "Karine", note: 82 },
+    { nom: "lucas", note: 90 },
+    { nom: "Mathilde", note: 95 },
+    { nom: "nicolas", note: 77 },
+    { nom: "Océane", note: 86 },
+    { nom: "paul", note: 80 },
+    { nom: "Quentin", note: 83 },
+    { nom: "rachel", note: 75 },
+    { nom: "Samuel", note: 92 },
+    { nom: "thibault", note: 89 },
+    { nom: "Ursula", note: 78 },
+    { nom: "vincent", note: 91 },
+    { nom: "Wendy", note: 87 },
+    { nom: "xena", note: 76 },
+    { nom: "Yasmine", note: 84 },
+    { nom: "zacharie", note: 93 },
+    { nom: "Amélie", note: 79 },
+    { nom: "bruno", note: 88 },
+    { nom: "Chloé", note: 82 },
+    { nom: "dylan", note: 90 },
+    { nom: "Estelle", note: 95 },
+    { nom: "fabrice", note: 77 },
+    { nom: "Géraldine", note: 86 },
+    { nom: "henri", note: 80 },
+    { nom: "Inès", note: 83 },
+    { nom: "jean", note: 75 },
+    { nom: "Kévin", note: 92 },
+    { nom: "léa", note: 89 },
+    { nom: "Mélanie", note: 78 },
+    { nom: "nathan", note: 91 },
+    { nom: "Ophélie", note: 87 },
+    { nom: "patrick", note: 76 },
+    { nom: "Quentin", note: 84 },
+    { nom: "rémi", note: 93 },
+    { nom: "Sarah", note: 79 },
+    { nom: "Earah", note: 79 },
+    { nom: "théo", note: 88 },
+    { nom: "Ugo", note: 82 },
+    { nom: "valentin", note: 90 },
+    { nom: "Wendy", note: 95 },
+    { nom: "xavier", note: 77 },
+    { nom: "Yohan", note: 86 },
+    { nom: "zoé", note: 80 },
+    { nom: "Antoine", note: 83 },
+    { nom: "bernadette", note: 75 },
+    { nom: "Cédric", note: 92 },
+    { nom: "diane", note: 89 },
+    { nom: "Élodie", note: 78 },
+    { nom: "franck", note: 91 },
+    { nom: "Guillaume", note: 87 },
+    { nom: "hélène", note: 76 },
+    { nom: "Isabelle", note: 84 },
+    { nom: "jules", note: 93 },
+    { nom: "Kevin", note: 79 },
+    { nom: "laetitia", note: 88 },
+    { nom: "Maxime", note: 82 },
+    { nom: "nadine", note: 90 },
+    { nom: "Olivier", note: 95 },
+    { nom: "pascal", note: 77 },
+    { nom: "Quentin", note: 86 },
+    { nom: "romain", note: 80 },
+    { nom: "Stéphanie", note: 83 },
+    { nom: "thomas", note: 75 },
+    { nom: "Ulysse", note: 92 },
+    { nom: "valérie", note: 89 }
+];
+console.log(students);
+
+
 console.log("Tri par note > à 80")
 
-    const goodStudents = [];        // je crée mon tableau des meilleurs étudiants
+const goodStudents = [];        // je crée mon tableau des meilleurs étudiants
 
-    for (i= 0; i < students.length; i++){   // j'initialise ma boucle
-        if (students[i].note > 80){;        // je pose ma condition note > 80
+for (i = 0; i < students.length; i++) {   // j'initialise ma boucle
+    if (students[i].note > 80) {
+        ;        // je pose ma condition note > 80
         goodStudents.push(students[i]);     // si condition remplie, je push dans mon nouveau tableau
     }
 }
@@ -301,108 +302,108 @@ let majuscules = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 // Tableau des lettres accentuées qu’on veut remplacer
 let accentuees = [
-  'à','â','ä','á','ã','å',
-  'ç',
-  'é','è','ê','ë',  // dans cet exercice on pouvait mettre uniquement les e
-  'î','ï','ì','í',
-  'ô','ö','ò','ó','õ',
-  'ù','û','ü','ú',
-  'ÿ','ý',
-  'À','Â','Ä','Á','Ã','Å',
-  'Ç',
-  'É','È','Ê','Ë',
-  'Î','Ï','Ì','Í',
-  'Ô','Ö','Ò','Ó','Õ',
-  'Ù','Û','Ü','Ú',
-  'Ÿ','Ý'
+    'à', 'â', 'ä', 'á', 'ã', 'å',
+    'ç',
+    'é', 'è', 'ê', 'ë',  // dans cet exercice on pouvait mettre uniquement les e
+    'î', 'ï', 'ì', 'í',
+    'ô', 'ö', 'ò', 'ó', 'õ',
+    'ù', 'û', 'ü', 'ú',
+    'ÿ', 'ý',
+    'À', 'Â', 'Ä', 'Á', 'Ã', 'Å',
+    'Ç',
+    'É', 'È', 'Ê', 'Ë',
+    'Î', 'Ï', 'Ì', 'Í',
+    'Ô', 'Ö', 'Ò', 'Ó', 'Õ',
+    'Ù', 'Û', 'Ü', 'Ú',
+    'Ÿ', 'Ý'
 ];
 
 // Tableau des équivalents sans accent (toujours en majuscules)
 let sansAccent = [
-  'A','A','A','A','A','A',
-  'C',
-  'E','E','E','E',        // IDEM
-  'I','I','I','I',
-  'O','O','O','O','O',
-  'U','U','U','U',
-  'Y','Y',
-  'A','A','A','A','A','A',
-  'C',
-  'E','E','E','E',
-  'I','I','I','I',
-  'O','O','O','O','O',
-  'U','U','U','U',
-  'Y','Y'
+    'A', 'A', 'A', 'A', 'A', 'A',
+    'C',
+    'E', 'E', 'E', 'E',        // IDEM
+    'I', 'I', 'I', 'I',
+    'O', 'O', 'O', 'O', 'O',
+    'U', 'U', 'U', 'U',
+    'Y', 'Y',
+    'A', 'A', 'A', 'A', 'A', 'A',
+    'C',
+    'E', 'E', 'E', 'E',
+    'I', 'I', 'I', 'I',
+    'O', 'O', 'O', 'O', 'O',
+    'U', 'U', 'U', 'U',
+    'Y', 'Y'
 ];
 
 // Boucle sur tous les étudiants sélectionnés (note > 80)
 for (i = 0; i < goodStudents.length; i++) {
 
-  // On récupère le nom original de l’étudiant
-  let nom = goodStudents[i].nom;
+    // On récupère le nom original de l’étudiant
+    let nom = goodStudents[i].nom;
 
-  // On prépare une chaîne vide pour construire le nouveau nom
-  let nouveauNom = "";
+    // On prépare une chaîne vide pour construire le nouveau nom
+    let nouveauNom = "";
 
-  // Boucle sur chaque caractère du nom
-  for (k = 0; k < nom.length; k++) {
+    // Boucle sur chaque caractère du nom
+    for (k = 0; k < nom.length; k++) {
 
-    // On prend la lettre actuelle
-    let ch = nom[k];
+        // On prend la lettre actuelle
+        let ch = nom[k];
 
-    // On crée un indicateur pour savoir si la lettre a été transformée
-    let converti = false;
+        // On crée un indicateur pour savoir si la lettre a été transformée
+        let converti = false;
 
-    // 1️⃣ Vérification si la lettre est accentuée
-    for (a = 0; a < accentuees.length; a++) {
-      if (ch === accentuees[a]) {
-        // Si oui, on remplace par sa version sans accent
-        ch = sansAccent[a];
-        converti = true; // on note qu’on l’a déjà transformée
-        break; // on sort de la boucle des accents
-      }
-    }
-
-    // 2️⃣ Si la lettre n’était pas accentuée, on regarde si c’est une minuscule
-    if (!converti) {
-      for (b = 0; b < lettres.length; b++) {
-        if (ch === lettres[b]) {
-          // Si c’est une minuscule, on la remplace par sa majuscule correspondante
-          ch = majuscules[b];
-          break; // on arrête la recherche
+        // 1️⃣ Vérification si la lettre est accentuée
+        for (a = 0; a < accentuees.length; a++) {
+            if (ch === accentuees[a]) {
+                // Si oui, on remplace par sa version sans accent
+                ch = sansAccent[a];
+                converti = true; // on note qu’on l’a déjà transformée
+                break; // on sort de la boucle des accents
+            }
         }
-      }
+
+        // 2️⃣ Si la lettre n’était pas accentuée, on regarde si c’est une minuscule
+        if (!converti) {
+            for (b = 0; b < lettres.length; b++) {
+                if (ch === lettres[b]) {
+                    // Si c’est une minuscule, on la remplace par sa majuscule correspondante
+                    ch = majuscules[b];
+                    break; // on arrête la recherche
+                }
+            }
+        }
+
+        // 3️⃣ On ajoute la lettre (convertie ou non) au nouveau nom
+        nouveauNom += ch;
     }
 
-    // 3️⃣ On ajoute la lettre (convertie ou non) au nouveau nom
-    nouveauNom += ch;
-  }
-
-  // 4️⃣ On remplace le nom d’origine par la version transformée (MAJ + sans accent)
-  goodStudents[i].nom = nouveauNom;
+    // 4️⃣ On remplace le nom d’origine par la version transformée (MAJ + sans accent)
+    goodStudents[i].nom = nouveauNom;
 }
 
 // ✅ Vérification du résultat : on affiche les noms nettoyés
 for (i = 0; i < goodStudents.length; i++) {
-  console.log(goodStudents[i].nom);
+    console.log(goodStudents[i].nom);
 }
 
 
 // --- TRI ALPHABÉTIQUE (A→Z) ---
 // si même nom → tri par note croissante
 for (i = 0; i < goodStudents.length; i++) {
-  for (j = i + 1; j < goodStudents.length; j++) {   // ⟵ (plus de ;)
-    if (goodStudents[i].nom > goodStudents[j].nom) { // ⟵ compare les NOMS
-      const tmp = goodStudents[i];
-      goodStudents[i] = goodStudents[j];
-      goodStudents[j] = tmp;
-    } else if (goodStudents[i].nom === goodStudents[j].nom  // SI étudiants i et j ont le même nom
+    for (j = i + 1; j < goodStudents.length; j++) {   // ⟵ (plus de ;)
+        if (goodStudents[i].nom > goodStudents[j].nom) { // ⟵ compare les NOMS
+            const tmp = goodStudents[i];
+            goodStudents[i] = goodStudents[j];
+            goodStudents[j] = tmp;
+        } else if (goodStudents[i].nom === goodStudents[j].nom  // SI étudiants i et j ont le même nom
             && goodStudents[i].note > goodStudents[j].note) { // et que  NOTE i > à NOTE j
-      const tmp = goodStudents[i];                    
-      goodStudents[i] = goodStudents[j];
-      goodStudents[j] = tmp;
+            const tmp = goodStudents[i];
+            goodStudents[i] = goodStudents[j];
+            goodStudents[j] = tmp;
+        }
     }
-  }
 }
 
 
@@ -414,5 +415,5 @@ console.log("Tri des étudiants par ordre alphabétique avec une note supérieur
 
 // AFFICHAGE APRÈS TRI
 for (let i = 0; i < goodStudents.length; i++) {
-  console.log(goodStudents[i].nom, goodStudents[i].note);
+    console.log(goodStudents[i].nom, goodStudents[i].note);
 }
