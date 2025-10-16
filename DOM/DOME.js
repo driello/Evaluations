@@ -136,7 +136,6 @@ textContent = texte simple (sécurisé), innerHTML = interprète du HTML (à év
 }
 
 let monH2 = document.createElement("h2");
-maPosition.appendChild(monH2);
 monH2.textContent = "Tableau des meilleurs étudiants";
 monH2.style.textAlign = "center";
 monH2.style.textDecoration = "underline";
@@ -144,24 +143,34 @@ monH2.style.background = "#A50505";
 monH2.style.color = "#f3eaeaff";
 monH2.style.padding = "20px";
 monH2.style.alignItems = "center";
+maPosition.appendChild(monH2);
+
 
 
 
 
 let monH3 = document.createElement("h3");
-monH2.appendChild(monH3);
 monH3.textContent = "Classement par ordre alphabétique";
 monH3.style.textAlign = "center";
 monH3.style.textDecoration = "underline";
 monH3.style.fontSize = "1rem";
+monH2.appendChild(monH3);
 
+
+
+let sectionTab = document.createElement("section");
+sectionTab.setAttribute("id", "etudiants");
+maPosition.appendChild(sectionTab);
 
 
 let monTab = document.createElement("table");  // création du tableau
 monTab.setAttribute("id", "etudiants");
-maPosition.appendChild(monTab);                // insertion dans le main (maPosition)
 monTab.style.border = "1px solid black";
 monTab.style.width = "100%";
+monTab.style.borderCollapse = "collapse"; // fusionne les bordures
+sectionTab.appendChild(monTab);                // insertion dans le main (maPosition)
+
+
 
 let Entete = document.createElement("thead");
 monTab.appendChild(Entete);
@@ -173,6 +182,7 @@ Entete.style.backgroundColor = "#A50505";
  colonneGauche.setAttribute("name", "Nom");
  colonneGauche.textContent = "Nom";
  colonneGauche.style.color = "white";
+ colonneGauche.style.borderRight = "1px solid black";
  
 
 
@@ -193,6 +203,7 @@ for (let i = 0; i < bonsEtudiants.length; i ++){
     if (i % 2 === 0) {                             // lignes paires modulo pour un sur deux c bueno!!!
         ligne.style.backgroundColor = "#2989b3";
         ligne.style.color = "#e9f3faff";
+        ligne.style.border = "1px solid black";
     }
     
     else ligne.style.backgroundColor = "#f2f2f2";
@@ -200,13 +211,138 @@ for (let i = 0; i < bonsEtudiants.length; i ++){
     etudiantsTab.appendChild(ligne);
         ligne.style.textAlign = "center";
     let nom1 = document.createElement("td");
-        ligne.appendChild(nom1);
     nom1.textContent = bonsEtudiants[i].nom;    // textContent n’est pas une fonction !!
+    nom1.style.borderRight = "1px solid black";
+    ligne.appendChild(nom1);
+
 
     let note1 = document.createElement("td");
-        ligne.appendChild(note1);
     note1.textContent =bonsEtudiants[i].note;
+    note1.style.width = "50%";
+    ligne.appendChild(note1);
+
+}
+
+monH2 = document.createElement("h2");
+monH2.textContent = "Tableau de tous les étudiants";
+monH2.style.textAlign = "center";
+monH2.style.textDecoration = "underline";
+monH2.style.background = "#05a528ff";
+monH2.style.color = "#f3eaeaff";
+monH2.style.padding = "20px";
+monH2.style.alignItems = "center";
+monH2.style.width = "60%";
+monH2.style.margin = "40px auto";
+monH2.style.height = "100px";
+maPosition.appendChild(monH2);
+
+
+
+
+
+monH3 = document.createElement("h3");
+monH3.textContent = "Classement par note croissante";
+monH3.style.textAlign = "center";
+monH3.style.textDecoration = "underline";
+monH3.style.fontSize = "1rem";
+monH3.style.margin = "O O";
+monH2.appendChild(monH3);
+
+
+let monH4 = document.createElement("h4");
+monH4.setAttribute("type","h4");
+monH4.textContent = "Les plus mauvais sont deja en minuscule! 😂";
+monH4.style.margin = "0 0";
+monH2.appendChild(monH4);
+
+
+let sectionYannick = document.createElement("section");
+sectionYannick.setAttribute("id", "etudiants");
+sectionYannick.style.background = "#47ef25ff";
+sectionYannick.style.width = "60%";
+sectionYannick.style.padding = "10px 10px";
+sectionYannick.style.margin = "0 auto";
+maPosition.appendChild(sectionYannick);
+
+ 
+let monTab2 =document.createElement("table");
+monTab2.setAttribute("id", "etudiants");
+monTab2.style.width = "80%";
+monTab2.style.margin = "10px auto";
+monTab2.style.border = "3px solid black"
+monTab2.style.borderCollapse = "collapse"; // fusionne les bordures
+sectionYannick.appendChild(monTab2);
+
+
+
+let Entete2 = document.createElement("thead");
+monTab2.appendChild(Entete2);
+
+
+let enteteTab2 = document.createElement("tr");
+enteteTab2.style.height = "60px";
+enteteTab2.style.backgroundImage = "url(./bandeaugreen.jpg)";
+enteteTab2.style.backgroundSize = "cover";
+enteteTab2.style.backgroundRepeat = "no-repeat";
+enteteTab2.style.backgroundPosition = "center";
+Entete2.appendChild(enteteTab2);
+
+
+
+let colonneGauche2 = document.createElement("th");
+colonneGauche2.textContent = "NOM";
+enteteTab2.appendChild(colonneGauche2);
+
+
+let colonneDroite2 = document.createElement("th");
+colonneDroite2.textContent = "NOTE";
+colonneDroite2.style.border = "3px solid black";
+enteteTab2.appendChild(colonneDroite2);
+
+
+let etudiantsTab2 = document.createElement("tbody");
+monTab2.appendChild(etudiantsTab2);
+
+
+for (let i = 0 ; i < etudiants.length ; i ++){
+     for (j = i + 1 ; j < etudiants.length ; j++){
+        if (etudiants[i].note > etudiants[j].note){
+            let temp = etudiants[i];
+            etudiants[i] = etudiants[j];
+            etudiants[j] = temp;
+        }
+    }
+    ligne2 = document.createElement("tr");
+    etudiantsTab2.appendChild(ligne2);
+
+      if (i % 2 === 0) {                             // lignes paires modulo pour un sur deux c bueno!!!
+        ligne2.style.backgroundColor = "#296b21ff";
+        ligne2.style.color = "#e9f3faff";
+        ligne2.style.border = "3px solid black";
+    }
+   
+    
+    else ligne2.style.backgroundColor = "#e0bfd8ff";
+
+    let nom2 = document.createElement("td");
+    nom2.textContent = (etudiants[i].nom);
+    nom2.style.textAlign = "center";
+    nom2.style.border = "3px solid black";
+    ligne2.appendChild(nom2);
+ 
+
+    let note2 = document.createElement("td");
+    note2.textContent = (etudiants[i].note);
+    note2.style.textAlign = "center";
+    note2.style.borderRight = "3px solid black"; 
+    note2.style.width = "50%";
+    ligne2.appendChild(note2);
+
+     if (etudiants[i].note < 80){
+        note2.style.color = "red";
+    }
+
 }
 
 
-console.log(bonsEtudiants);
+
