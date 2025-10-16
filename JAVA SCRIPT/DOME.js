@@ -135,6 +135,27 @@ textContent = texte simple (sécurisé), innerHTML = interprète du HTML (à év
     console.log(prenom);
 }
 
+let monH2 = document.createElement("h2");
+maPosition.appendChild(monH2);
+monH2.textContent = "Tableau des meilleurs étudiants";
+monH2.style.textAlign = "center";
+monH2.style.textDecoration = "underline";
+monH2.style.background = "#A50505";
+monH2.style.color = "#f3eaeaff";
+monH2.style.padding = "20px";
+monH2.style.alignItems = "center";
+
+
+
+
+let monH3 = document.createElement("h3");
+monH2.appendChild(monH3);
+monH3.textContent = "Classement par ordre alphabétique";
+monH3.style.textAlign = "center";
+monH3.style.textDecoration = "underline";
+monH3.style.fontSize = "1rem";
+
+
 
 let monTab = document.createElement("table");  // création du tableau
 monTab.setAttribute("id", "etudiants");
@@ -170,10 +191,11 @@ monTab.appendChild(etudiantsTab);
 for (let i = 0; i < bonsEtudiants.length; i ++){
     let ligne = document.createElement("tr");
     if (i % 2 === 0) {                             // lignes paires modulo pour un sur deux c bueno!!!
-        ligne.style.backgroundColor = "#f2f2f2";
+        ligne.style.backgroundColor = "#2989b3";
+        ligne.style.color = "#e9f3faff";
     }
     
-    else ligne.style.backgroundColor = "#2989b3";
+    else ligne.style.backgroundColor = "#f2f2f2";
  
     etudiantsTab.appendChild(ligne);
         ligne.style.textAlign = "center";
